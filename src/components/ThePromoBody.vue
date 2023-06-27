@@ -329,17 +329,18 @@
 <script>
 
 import axios from 'axios'
+
 export default {
   data() {
     return {
-      results: []
+      results: [],
+      govno: [],
     }
   },
   mounted() {
     axios
         .get('http://127.0.0.1:8000/roles/')
         .then(response => this.results = response.data.result)
-        .catch(error => console.log(error))
   },
   name: "ThePromoBody"
 }
