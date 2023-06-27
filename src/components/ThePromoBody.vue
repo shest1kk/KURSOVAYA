@@ -315,12 +315,35 @@
 
     </div>
   </div>
+
+
+  <ul>
+    <li v-for="result in results" :key="result.id">
+      {{ result.id }}
+      {{ result.name }}
+      {{ result.permissions }}
+    </li>
+  </ul>
 </template>
 
 <script>
+
+import axios from 'axios'
 export default {
+  data() {
+    return {
+      results: []
+    }
+  },
+  mounted() {
+    axios
+        .get('http://127.0.0.1:8000/roles/')
+        .then(response => this.results = response.data.result)
+        .catch(error => console.log(error))
+  },
   name: "ThePromoBody"
 }
+
 </script>
 
 <style scoped>

@@ -8,7 +8,6 @@
 import TheHeader from './components/TheHeader'
 import ThePromoBody from "@/components/ThePromoBody";
 import CarChoosing from "@/components/CarChoosing";
-// import axios from "axios";
 
 export default {
   name: 'App',
@@ -18,10 +17,6 @@ export default {
     CarChoosing,
   }
 }
-// axios
-//   .get('http://localhost:8000/')
-//   .then(response => console.log(response.data))
-//   .catch(error => console.log(error));
 
 </script>
 
